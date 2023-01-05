@@ -5,8 +5,13 @@ router.get('/', async (req, res) => {
   const projects = await Project.findAll({
     raw: true
   })
-  console.log(projects)
-  res.render('home')
+  res.render('home', {
+    projects
+  })
+})
+
+router.get('/project/:id', async (req, res) => {
+  res.send('PROJECTS')
 })
 
 module.exports = router;
