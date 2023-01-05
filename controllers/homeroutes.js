@@ -6,7 +6,8 @@ router.get('/', async (req, res) => {
     raw: true
   })
   res.render('home', {
-    projects
+    projects,
+    loggedIn: req.session.logged_in
   })
 })
 

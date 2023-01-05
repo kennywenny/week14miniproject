@@ -18,11 +18,11 @@ In this mini-project, you will work with a group to build a full-stack crowdfund
 
 * It's done when the `/login` route renders a form to log in and a form to create a new account.
 
+* It's done when a new user can create an account on the login page and then be immediately logged in with a session.
+
 ### TODO Acceptance Criteria
 
 * It's done when an existing user can enter their credentials on the login page to create a session on the server.
-
-* It's done when a new user can create an account on the login page and then be immediately logged in with a session.
 
 * It's done when the `/profile` route renders the logged-in user's projects and a form to create a new project.
 
