@@ -12,7 +12,9 @@ router.get('/', async (req, res) => {
 
 router.get('/project/:id', async (req, res) => {
   const id = req.params.id
-  res.send('PROJECT ID ' + id)
+  const project = await Project.findByPk(id)
+  console.log(project)
+  res.json(project)
 })
 
 module.exports = router;
