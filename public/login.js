@@ -1,6 +1,26 @@
 loginEventHandler = async e => {
   e.preventDefault()
-  console.log('LOGIN!')
+  const email = document
+    .getElementById('login_email')
+    .value
+    .trim()
+  const password = document
+    .getElementById('login_password')
+    .value
+    .trim()
+  const response = await fetch('/api/users/login', {
+    method: 'post',
+    body: JSON.stringify({ email, password }),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
+  })
+  if (response.status !== 200) {
+    alert('Could not login')
+    return
+  }
+  document.location.replace('/');
 }
 
 createEventHandler = async e => {

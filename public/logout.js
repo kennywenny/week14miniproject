@@ -7,10 +7,10 @@ logoutEventHandler = async e => {
       'Content-Type': 'application/json'
     },
   })
-  if (response.ok) {
+  if (response.status !== 204) {
     alert('Could not log out')
   }
-  console.log('Logged out')
+  document.location.replace('/');
 }
 
 document
