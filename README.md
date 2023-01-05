@@ -14,9 +14,9 @@ In this mini-project, you will work with a group to build a full-stack crowdfund
 
 * It's done when the `/` homepage route renders a list of all projects from the database.
 
-### TODO Acceptance Criteria
-
 * It's done when the `/project/:id` route renders an individual project's details based on the route parameter id.
+
+### TODO Acceptance Criteria
 
 * It's done when the `/login` route renders a form to log in and a form to create a new account.
 

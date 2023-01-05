@@ -15,7 +15,12 @@ router.get('/project/:id', async (req, res) => {
   const project = await Project.findByPk(id, {
     raw: true
   })
+  // TODO: 404 if project doesn't exist
   res.render('project', project)
+})
+
+router.get('/login', async (req, res) => {
+  res.render('login')
 })
 
 module.exports = router;
