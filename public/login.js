@@ -5,7 +5,12 @@ loginEventHandler = async e => {
 
 createEventHandler = async e => {
   e.preventDefault()
-  console.log('CREATE!')
+  // TODO: Check that passwords match
+  const username = document
+    .getElementById('create_user_username')
+    .value
+    .trim()
+  console.log('USERNAME: ' + username)
 }
 
 document
