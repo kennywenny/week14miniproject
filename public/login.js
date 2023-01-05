@@ -19,9 +19,17 @@ createEventHandler = async e => {
     .trim()
   const response = await fetch('/api/users', {
     method: 'post',
-    body: JSON.stringify({ name, email, password })
+    body: JSON.stringify({ name, email, password }),
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json'
+    },
   })
-  console.log(response)
+  if (response.status !== 200) {
+    alert('Could not create user')
+    return
+  }
+  document.location.replace('/');
 }
 
 document
