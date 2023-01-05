@@ -11,7 +11,8 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/project/:id', async (req, res) => {
-  res.send('PROJECTS')
+  const id = req.params.id
+  res.send('PROJECT ID ' + id)
 })
 
 module.exports = router;
